@@ -22,15 +22,13 @@ function addToComplete() {
     let listCompleteToDo = document.querySelector(".complete_to-do");
 
     addBtnInComplete.forEach(item => {
-
-    item.addEventListener("click", () => {
-        let newCompleteToDoItem = item.parentNode;
-        newCompleteToDoItem.firstElementChild.remove();
-        newCompleteToDoItem.classList.add("complete");
-        listCompleteToDo.appendChild(newCompleteToDoItem);
+        item.addEventListener("click", () => {
+            let newCompleteToDoItem = item.parentNode;
+            newCompleteToDoItem.firstElementChild.remove();
+            newCompleteToDoItem.classList.add("complete");
+            listCompleteToDo.appendChild(newCompleteToDoItem);
         })
     })
-
 }
 addToComplete();
 
@@ -40,7 +38,6 @@ function removeBtnToDoItem() {
     removeBtnItem.forEach(item => {
         item.addEventListener("click", () => {
             item.parentNode.remove();
-
         })
     })
 }
@@ -78,7 +75,45 @@ addBtnToDo.addEventListener("click", () => {
 
 })
 
+// Скрипты на проект калькулятор ______________________________________________________
+let i = "iman";
+console.log(i.substring(0,i.length -1))
+const calcShowResHistory = document.querySelector(".calc_show-res-history");
+const calcShowResCurrent = document.querySelector(".calc_show-res-current");
+let calcInputBtns = document.querySelectorAll(".calc_input-btn");
 
+calcInputBtns.forEach(item => {
+    item.addEventListener("click", () => {
+        if (calcShowResCurrent.innerHTML === "0" || calcShowResCurrent.innerHTML[0] === "=") {
+            calcShowResCurrent.innerHTML = "";
+        }else if (calcShowResCurrent.innerHTML.indexOf('/') > -1
+                || calcShowResCurrent.innerHTML.includes("**")
+                || calcShowResCurrent.innerHTML.includes("++")
+                || calcShowResCurrent.innerHTML.includes("--")
+        ) {
+            calcShowResCurrent.innerHTML.substring(0,calcShowResCurrent.innerHTML.length - 1);
+            console.log(999)
+        }
+        console.log(calcShowResCurrent.innerHTML.indexOf('1'));
+        switch (item.innerHTML) {
+            case "c":
+                calcShowResCurrent.innerHTML = calcShowResCurrent.innerHTML.substring(0,calcShowResCurrent.innerHTML.length - 1)
+              
+                break;
+            case "ce":
+                calcShowResCurrent.innerHTML = "";
+                calcShowResHistory.innerHTML = "";
+                break;
+            case "=":
+                calcShowResHistory.innerHTML = calcShowResCurrent.innerHTML;
+                let resCurrentCalc = eval(calcShowResCurrent.innerHTML);
+                calcShowResCurrent.innerHTML = "=" + resCurrentCalc;
+                break;
+        
+            default:
+                calcShowResCurrent.innerHTML += item.innerHTML;
+                break;
+        }
+    })
 
-
-
+})

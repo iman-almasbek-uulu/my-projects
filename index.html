@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="media.css">
 </head>
 <body>
     <div class="container">
@@ -21,7 +22,7 @@
                     
                     
                     <ul class="list_to-do">
-                        <li class="list_to-do-item"> 
+                        <li class=""> list_to-do-item
                             <span class="img-container add_complete"><img src="./img/free-icon-check-758835.png" alt=""></span>
                             <span>Go shopping </span>  <span class="img-container remove_to-do-item">
                                 <img src="./img/free-icon-remove-1103721.png" alt="">
@@ -103,33 +104,34 @@
             </li>
             <li class="project_item">
                 <button class="btn to_do-btn">calculatir</button>
-                <div class="to_do-project add_project">
-                    <h2>To Do List</h2>
-                    <div class="add_to-do">
-                        <input class="input_to-do" type="text">
-                        <button class="add-btn">add</button>
+                <div class="calc-project add_project">
+                    <div class="calc_show-res">
+                        <p class="calc_show-res-history"></p>
+                        <p class="calc_show-res-current">0</p>
                     </div>
-                    
-                    
-                    
 
-                    <h3>Completed</h3>
-                    <ul class="list_to-do complete_to-do">
-                        <li class="list_to-do-item complete">
-                            <span>Go shopping </span>  <span class="img-container">
-                            <img src="./img/free-icon-remove-1103721.png" alt="">
-                        </span></li>
-                        <li class="list_to-do-item complete">
-                            <span>Go shopping </span>  <span class="img-container">
-                                <img src="./img/free-icon-remove-1103721.png" alt="">
-                            </span>
-                        </li>
-                        <li class="list_to-do-item complete">
-                            <span>Go shopping </span>  <span class="img-container">
-                                <img src="./img/free-icon-remove-1103721.png" alt="">
-                            </span>
-                        </li>
-                    </ul>
+                    <div class="calc_input-btns">
+                        <button class="calc_input-btn rad-top-left">c</button>
+                        <button class="calc_input-btn">/</button>
+                        <button class="calc_input-btn">*</button>
+                        <button class="calc_input-btn rad-top-right">ce</button>
+                        <button class="calc_input-btn">7</button>
+                        <button class="calc_input-btn">8</button>
+                        <button class="calc_input-btn">9</button>
+                        <button class="calc_input-btn">+</button>
+                        <button class="calc_input-btn">4</button>
+                        <button class="calc_input-btn">5</button>
+                        <button class="calc_input-btn">6</button>
+                        <button class="calc_input-btn">-</button>
+                        <button class="calc_input-btn">1</button>
+                        <button class="calc_input-btn">2</button>
+                        <button class="calc_input-btn">3</button>
+                        <button class="calc_input-btn row-2">=</button>
+                        <button class="calc_input-btn rad-bot-left">%</button>
+                        <button class="calc_input-btn">0</button>
+                        <button class="calc_input-btn">.</button>
+                    </div>
+                   
                     <button class="close"><img src="./img/free-icon-close-6276642.png" alt=""></button>
 
                 </div>

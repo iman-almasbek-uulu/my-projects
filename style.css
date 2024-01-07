@@ -63,13 +63,15 @@ body {
 }
 
 .to_do-project {
-    width: 80vw;
+    width: 1000px;
     padding: 74px 87px 121px 126px;
     position: absolute;
     background-color: #38404B;
-    top: 5%;
-    left: 5%;
+    top: 3%;
+    left: 50%;
+    transform: translate(-50%,0%);
     border-radius: 65px;
+    min-height: 500px;
 }
 
 .add_project {
@@ -130,9 +132,9 @@ h2 {
 }
 
 .list_to-do {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
     padding-top: 50px;
     padding-bottom: 50px;
 }
@@ -141,7 +143,8 @@ h2 {
     color: #94ADCF;
     font-size: 18px;
     font-weight: 500;
-    width: 449px;
+    margin: 0 60px 35px 0;
+    width: 349px;
     height: 65px;
     fill: #38404B;
     box-shadow: -1px -1px 2px 0px rgba(48, 54, 64, 0.50) inset, 1px 1px 2px 0px rgba(64, 74, 86, 0.30) inset;
@@ -174,7 +177,7 @@ h2 {
     justify-content: space-between;
     color: deeppink;
     background-color: #572A64;
-    width: 460px;
+    width: 360px;
 }
 
 .list_to-do-item:hover .img-container {
@@ -215,4 +218,80 @@ h3 {
 .complete::before {
     background-color: #94ADCF; /* Задайте цвет заливки здесь */
   
+}
+
+
+/* Стили для проекта калькулятор */
+
+.calc-project {
+    width: 400px;
+    border-radius: 34px;
+    border: 8px solid #FFF;
+    background: #313131;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    margin: 0 auto;
+}
+
+.calc-project > .close {
+    right: -20%;
+}
+
+.calc_show-res {
+    padding: 38px 15px 18px;
+    text-align: right;
+}
+
+.calc_show-res-history {
+    font-size: 19px;
+    color: white;
+}
+
+.calc_show-res-current {
+    color: #FFF;
+    font-size: 39px;
+    max-width: 440px;
+}
+
+.calc_input-btns {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+}
+
+.calc_input-btn {
+    width: 100px;
+    height: 90px;
+    background-color: white;
+    border: 0;
+    text-transform: uppercase;
+    color: #000;
+    font-size: 20px;
+    font-weight: 500;
+    border-radius: 0;
+    transition: .3s ease;
+    cursor: pointer;
+}
+
+.calc_input-btn:hover {
+    background:gray;
+}
+
+.row-2 {
+    grid-row: span 2;
+    height: 180px;
+    border-bottom-right-radius: 25px;
+}
+
+.rad-top-left {
+    border-top-left-radius: 25px;
+}
+
+.rad-top-right {
+    border-top-right-radius: 25px;
+}
+
+.rad-bot-left {
+    border-bottom-left-radius: 25px;
 }
